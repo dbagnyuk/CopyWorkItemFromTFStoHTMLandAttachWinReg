@@ -50,8 +50,7 @@
             this.Controls.Add(this.webBrowser);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "browserForm";
-            //this.Text = "TFS Work Item";
-            this.Text = TFStoHTML.workItem.Type.Name + " " + TFStoHTML.workItem.Id;
+            this.Text = "TFS Work Item";
             this.Load += new System.EventHandler(this.browserForm_Load);
             this.ResumeLayout(false);
 
