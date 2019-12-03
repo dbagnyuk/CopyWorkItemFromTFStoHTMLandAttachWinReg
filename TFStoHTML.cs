@@ -118,7 +118,7 @@ namespace CopyWorkItemFromTFStoHTMLandAttachWinReg
                 WorkItem wiDeliverable = workItemStore.GetWorkItem(link.TargetId);
                 temp += @"<tr><td>" + link.LinkTypeEnd.Name  + "</td>" + System.Environment.NewLine;
                 temp += @"<td>" + wiDeliverable.Type.Name  + "</td>" + System.Environment.NewLine;
-                temp += @"<td><a href=""" + tfsLink + wiDeliverable.Id + @""">" + wiDeliverable.Id + @"</a></td>" + System.Environment.NewLine;
+                temp += @"<td><a href=""" + tfsLink + wiDeliverable.Id + @""" target=""_blank"">" + wiDeliverable.Id + @"</a></td>" + System.Environment.NewLine;
                 temp += @"<td>" + wiDeliverable.State  + "</td>" + System.Environment.NewLine;
                 temp += @"<td>" + wiDeliverable.Title  + "</td>" + System.Environment.NewLine;
                 temp += @"<td>" + wiDeliverable.Fields["Assigned To"].Value  + "</td></tr>" + System.Environment.NewLine;
@@ -127,7 +127,7 @@ namespace CopyWorkItemFromTFStoHTMLandAttachWinReg
 
             // block with the web link to the thin client on to work item
             temp += @"<div style=""border: 1px solid black; background-color:lightgray;"">LINK:</div>" + System.Environment.NewLine;
-            temp += @"<p><a href=""" + tfsLink + workItem.Id + @""">" + tfsLink + workItem.Id + @"</a></p>" + System.Environment.NewLine;
+            temp += @"<p><a href=""" + tfsLink + workItem.Id + @""" target=""_blank"">" + tfsLink + workItem.Id + @"</a></p>" + System.Environment.NewLine;
 
             // create the path to directory for saving attachments and search if the dir alredy exist
             DirectoryInfo hdDirectoryInWhichToSearch = new DirectoryInfo(PathToTasks);

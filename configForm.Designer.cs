@@ -57,7 +57,7 @@
             this.groupBoxConfig.Size = new System.Drawing.Size(220, 220);
             this.groupBoxConfig.TabIndex = 0;
             this.groupBoxConfig.TabStop = false;
-            this.groupBoxConfig.Text = "Create/Edit Config File";
+            this.groupBoxConfig.Text = "Create/Edit Config";
             this.groupBoxConfig.Enter += new System.EventHandler(this.groupBoxConfig_Enter);
             // 
             // buttonDirChoose
@@ -146,6 +146,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(239, 237);
             this.Controls.Add(this.groupBoxConfig);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(690, 530);
             this.MaximizeBox = false;

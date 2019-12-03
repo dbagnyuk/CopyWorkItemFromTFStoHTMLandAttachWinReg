@@ -49,15 +49,24 @@ namespace CopyWorkItemFromTFStoHTMLandAttachWinReg
                     wbrDisplay.Show();
                 }
 
-                // download the attachments from tfs item
+                // download the attachments from tfs item in new thread 
                 if (checkBoxAttach.Checked)
-                    if (!TFStoHTML.downloadAttach())
-                        MessageBox.Show("For some reason, attachments cannot be downloaded!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                {
+                    new System.Threading.Thread(delegate () {
+                        if (!TFStoHTML.downloadAttach())
+                            MessageBox.Show("For some reason, attachments cannot be downloaded!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }).Start();
+                }
+
+                //// download the attachments from tfs item
+                //if (checkBoxAttach.Checked)
+                //    if (!TFStoHTML.downloadAttach())
+                //        MessageBox.Show("For some reason, attachments cannot be downloaded!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 TFStoHTML.temp = null;
 
-                Cursor.Current = Cursors.Default;
                 this.Enabled = true;
+                Cursor.Current = Cursors.Default;
             }
             else
             {

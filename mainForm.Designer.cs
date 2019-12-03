@@ -37,10 +37,10 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox = new System.Windows.Forms.GroupBox();
-            this.checkBoxAttach = new System.Windows.Forms.CheckBox();
-            this.labelTFSid = new System.Windows.Forms.Label();
-            this.checkBoxWindow = new System.Windows.Forms.CheckBox();
             this.checkBoxFile = new System.Windows.Forms.CheckBox();
+            this.checkBoxWindow = new System.Windows.Forms.CheckBox();
+            this.labelTFSid = new System.Windows.Forms.Label();
+            this.checkBoxAttach = new System.Windows.Forms.CheckBox();
             this.menuStrip.SuspendLayout();
             this.groupBox.SuspendLayout();
             this.SuspendLayout();
@@ -108,17 +108,12 @@
             this.groupBox.Name = "groupBox";
             this.groupBox.TabStop = false;
             // 
-            // checkBoxAttach
+            // checkBoxFile
             // 
-            resources.ApplyResources(this.checkBoxAttach, "checkBoxAttach");
-            this.checkBoxAttach.Name = "checkBoxAttach";
-            this.checkBoxAttach.UseVisualStyleBackColor = true;
-            this.checkBoxAttach.CheckedChanged += new System.EventHandler(this.checkBoxAttach_CheckedChanged);
-            // 
-            // labelTFSid
-            // 
-            resources.ApplyResources(this.labelTFSid, "labelTFSid");
-            this.labelTFSid.Name = "labelTFSid";
+            resources.ApplyResources(this.checkBoxFile, "checkBoxFile");
+            this.checkBoxFile.Name = "checkBoxFile";
+            this.checkBoxFile.UseVisualStyleBackColor = true;
+            this.checkBoxFile.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // checkBoxWindow
             // 
@@ -129,12 +124,17 @@
             this.checkBoxWindow.Name = "checkBoxWindow";
             this.checkBoxWindow.UseVisualStyleBackColor = true;
             // 
-            // checkBoxFile
+            // labelTFSid
             // 
-            resources.ApplyResources(this.checkBoxFile, "checkBoxFile");
-            this.checkBoxFile.Name = "checkBoxFile";
-            this.checkBoxFile.UseVisualStyleBackColor = true;
-            this.checkBoxFile.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            resources.ApplyResources(this.labelTFSid, "labelTFSid");
+            this.labelTFSid.Name = "labelTFSid";
+            // 
+            // checkBoxAttach
+            // 
+            resources.ApplyResources(this.checkBoxAttach, "checkBoxAttach");
+            this.checkBoxAttach.Name = "checkBoxAttach";
+            this.checkBoxAttach.UseVisualStyleBackColor = true;
+            this.checkBoxAttach.CheckedChanged += new System.EventHandler(this.checkBoxAttach_CheckedChanged);
             // 
             // mainForm
             // 
@@ -142,7 +142,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox);
             this.Controls.Add(this.menuStrip);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MainMenuStrip = this.menuStrip;
+            this.MaximizeBox = false;
             this.Name = "mainForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.mainForm_FormClosing);
             this.Load += new System.EventHandler(this.mainForm_Load);
