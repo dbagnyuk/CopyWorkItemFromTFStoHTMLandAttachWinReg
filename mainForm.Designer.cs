@@ -52,6 +52,11 @@
             this.findButton.UseVisualStyleBackColor = true;
             this.findButton.Click += new System.EventHandler(this.buttonFind_Click);
             // 
+            // labelTFSid
+            // 
+            resources.ApplyResources(this.labelTFSid, "labelTFSid");
+            this.labelTFSid.Name = "labelTFSid";
+            // 
             // textBoxTFSid
             // 
             resources.ApplyResources(this.textBoxTFSid, "textBoxTFSid");
@@ -113,7 +118,6 @@
             resources.ApplyResources(this.checkBoxFile, "checkBoxFile");
             this.checkBoxFile.Name = "checkBoxFile";
             this.checkBoxFile.UseVisualStyleBackColor = true;
-            this.checkBoxFile.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // checkBoxWindow
             // 
@@ -123,11 +127,6 @@
             this.checkBoxWindow.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxWindow.Name = "checkBoxWindow";
             this.checkBoxWindow.UseVisualStyleBackColor = true;
-            // 
-            // labelTFSid
-            // 
-            resources.ApplyResources(this.labelTFSid, "labelTFSid");
-            this.labelTFSid.Name = "labelTFSid";
             // 
             // checkBoxAttach
             // 

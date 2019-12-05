@@ -24,8 +24,8 @@ namespace CopyWorkItemFromTFStoHTMLandAttachWinReg
             t_Tip.Active = true;
             t_Tip.AutoPopDelay = 4000;
             t_Tip.InitialDelay = 500;
-            t_Tip.IsBalloon = true;
-            t_Tip.ToolTipIcon = ToolTipIcon.Info;
+            //t_Tip.IsBalloon = true;
+            //t_Tip.ToolTipIcon = ToolTipIcon.Info;
             t_Tip.SetToolTip(textBoxTFSid, "TFS id contain only digits!");
         }
 
@@ -156,11 +156,6 @@ namespace CopyWorkItemFromTFStoHTMLandAttachWinReg
             {
                 e.Cancel = true;
             }
-        }
-
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
